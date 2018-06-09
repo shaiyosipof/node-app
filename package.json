@@ -1,0 +1,29 @@
+{
+  "name": "sap_test",
+  "version": "1.0.0",
+  "description": "server client rest api with web",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js  --exec \" node -r babel-register\"",
+    "test": "mocha test/test.js"
+  },
+  "author": "shai.yosipof",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "cors": "^2.8.4"
+
+
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "mocha": "^5.2.0",
+    "assert": "^1.4.1"
+
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test App</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" >
+    <script src="./js/jquery-1.9.1.js" ></script>
+    <script src="./js/bootstrap.min.js" ></script>
+    <script src="./js/user.js" ></script>
+    <script src="./js/book.js" ></script>
+    <script src="./js/ajax.js" ></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="User.get_users();">Users</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="Book.get_books();">Book</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div></div>
+    <div id="table_data"></div>
+</body>
+</html>
