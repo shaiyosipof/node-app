@@ -14,18 +14,9 @@ class CurrencyController extends BaseController {
 
     async get_currency_conversion(req,res){
         const url = "/convert?q="+req.query["from"] + "_" + req.query["to"] + "&compact=y";
-        console.log("test22");
         let result = await CurlModel.getCurl(process.env.CURRENCYCONVERT,url,false);
-        console.log(result);
-        console.log("test55");
+        super.send_response(res,result);
 
-        res.send({test:result});
-        //this.send_response(res,{test:333});
-
-    }
-
-    async send_response(res,data) {
-        await BaseController.prototype.send_response(res,data)
     }
 
 };
