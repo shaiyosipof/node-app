@@ -17,12 +17,12 @@ class BookController extends BaseController {
     get_book() {
     }
 
-    get_all_books(req,res) {
+    get_all_books(req,res) { // getAllBooks
         let all_books = Book_model.get_books()
         super.send_response(res,all_books);
     }
 
-    get_book_price(req,res,next){
+    get_book_price(req,res,next){ //getBookPrice
         let book_price = Book_model.get_book_price(req.body.book_id);
         req.book_price=book_price;
         next();

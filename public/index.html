@@ -9,21 +9,41 @@
     <script src="./js/user.js" ></script>
     <script src="./js/book.js" ></script>
     <script src="./js/ajax.js" ></script>
+    <script src="./js/main.js" ></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" onclick="User.get_users();">Users</a></li>
-                <li class="nav-item"><a class="nav-link" onclick="Book.get_books();">Book</a></li>
-            </ul>
+
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
         </div>
-    </nav>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navigationbar">
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#" onclick="Main.main_option();">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="User.get_users();">Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="Book.get_books();">Book</a></li>
+                <li class=""><a href="#"> <span class="sr-only"> </span> </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"> Logout</a></li>
+
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
 
-
-    <div></div>
-    <div id="table_data"></div>
+    <div style="padding-top: 70px;" class="container" id="table_data"></div>
 </body>
 </html>

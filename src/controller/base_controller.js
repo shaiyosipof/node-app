@@ -11,7 +11,7 @@ class BaseController{
 
     }
 
-    send_response(res,data){
+    send_response(res,data){ // need camel case sendResonse(res,data)
         res.send({
             error_code:0,
             error_desc:"",

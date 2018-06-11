@@ -3,6 +3,8 @@
  */
 'use strict'
 
+require('dotenv').config();
+
 var express = require('express'),
     app = express(),
     port = process.env.PORT || 3000;
@@ -16,11 +18,12 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-var routes = require('./router/main_route'); //importing route
-routes(app); //register the route
+var mainRoute = require('./router/main_route'); //importing route
+mainRoute(app); //register the route
 
 app.listen(port);
 
 
 
-app.use(function(req,res,next){console.log("test22");next()});
+// TODO: let's create an api that is requesting data from another api and get it to my server.
+//app.use(function(req,res,next){console.log("test22");next()});
