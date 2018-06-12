@@ -20,6 +20,14 @@
 
 		<div id="app"></div>
 
+        <% if (htmlWebpackPlugin.options.vendorsFilePath) { %>
+        <script src="<%= htmlWebpackPlugin.options.vendorsFilePath %>"></script>
+        <% } %>
+
+        <% for (var i=0; i < htmlWebpackPlugin.files.js.length; i++ ) { %>
+        <script <% if (i === 1) { %> async <% } %> src="<%= htmlWebpackPlugin.files.js[i] %>"></script>
+        <% } %>
+
 	</body>
 
 </html>
